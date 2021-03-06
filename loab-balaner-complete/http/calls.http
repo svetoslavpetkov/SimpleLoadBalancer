@@ -1,0 +1,23 @@
+@lbPort=5000
+
+### Taret List
+GET http://localhost:{{lbPort}}/manage/target
+
+
+### Insert target
+POST http://localhost:{{lbPort}}/manage/target
+content-type: application/json
+
+{
+  "host": "localhost",
+  "port": "4004" 
+}
+
+### Delete target
+DELETE http://localhost:{{lbPort}}/manage/target
+content-type: application/json
+
+{
+  "host": "localhost",
+  "port": "4000" 
+}
