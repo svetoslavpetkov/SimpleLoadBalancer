@@ -20,8 +20,8 @@ class RequestSampling {
       const end = new Date()
       // eslint-disable-next-line prettier/prettier
       const durationISec = (end.getTime() - this.samplingStarted.getTime()) / 1000
-      const tps = this.currentSamplesCount / durationISec
-      console.log(`${end.toLocaleTimeString()} - ${tps.toFixed(2)} tps`)
+      const rps = this.currentSamplesCount / durationISec
+      console.log(`${end.toLocaleTimeString()} - ${rps.toFixed(2)} rps`)
 
       this.currentSamplesCount = 0
       this.samplingStarted = new Date()
