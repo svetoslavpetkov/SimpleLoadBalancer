@@ -18,7 +18,8 @@ export class AppService {
 
   async getDelayedResponse(): Promise<string> {
     const delay = config.delayInMs
-    return `REsponse delayed with ${delay}`
+    await wait(delay)
+    return `Response delayed with ${delay}`
   }
 
   async getComputeResponse(): Promise<string> {
